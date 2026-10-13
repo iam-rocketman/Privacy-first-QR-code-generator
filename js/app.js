@@ -974,10 +974,33 @@
     });
   }
 
+  // --- GitHub Repository Link Binding ---
+  const GITHUB_REPO_URL = 'https://github.com/iam-rocketman/Privacy-first-QR-code-generator';
+
+  function initLinks() {
+    const ghHeader = document.getElementById('githubRepoLink');
+    if (ghHeader) {
+      ghHeader.href = GITHUB_REPO_URL;
+      ghHeader.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(GITHUB_REPO_URL, '_blank', 'noopener,noreferrer');
+      });
+    }
+    const ghFooter = document.getElementById('footerGithubLink');
+    if (ghFooter) {
+      ghFooter.href = GITHUB_REPO_URL;
+      ghFooter.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(GITHUB_REPO_URL, '_blank', 'noopener,noreferrer');
+      });
+    }
+  }
+
   // --- Initialize Application ---
   function init() {
     initTheme();
     initPWA();
+    initLinks();
     setupEventListeners();
     loadSavedState();
     updateQRCode();

@@ -3,7 +3,7 @@
  * Enables offline usage and fast PWA loading
  */
 
-const CACHE_NAME = 'qr-free-v1';
+const CACHE_NAME = 'qr-free-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
